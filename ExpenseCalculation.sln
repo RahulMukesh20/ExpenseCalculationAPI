@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35431.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseCalculation.DAL", "ExpenseCalculation.DAL\ExpenseCalculation.DAL.csproj", "{8D7135E7-DC94-4BB3-979A-1CA667A008F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseCalc.WebApi", "ExpenseCalc.WebApi\ExpenseCalc.WebApi.csproj", "{0D3B440C-8F98-423F-80B0-5E7AA6BE9C7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D7135E7-DC94-4BB3-979A-1CA667A008F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7135E7-DC94-4BB3-979A-1CA667A008F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7135E7-DC94-4BB3-979A-1CA667A008F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7135E7-DC94-4BB3-979A-1CA667A008F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3B440C-8F98-423F-80B0-5E7AA6BE9C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3B440C-8F98-423F-80B0-5E7AA6BE9C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3B440C-8F98-423F-80B0-5E7AA6BE9C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3B440C-8F98-423F-80B0-5E7AA6BE9C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A66E573B-8257-4683-AFD6-C4102D70416D}
+	EndGlobalSection
+EndGlobal
