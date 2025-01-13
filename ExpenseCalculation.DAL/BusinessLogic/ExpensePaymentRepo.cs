@@ -144,8 +144,8 @@ namespace ExpenseCalculation.DAL.BusinessLogic
                 List<PaymentDetail> paymentDetails = new List<PaymentDetail>();
                 paymentDetails = GetPaymentDetails(groupId);
 
-                var amtCollected = paymentDetails.Where(x => x.MemberName == "TripAdvisor" && (x.PaymentType == "CASH" || x.PaymentType == "UPI")).GroupBy(g => g.PaymentType).Select(x => new { Id = x.Key, Value = x.Sum(x => x.Amount) }).OrderBy(x => x.Id).ToList();
-                var amtSpent = paymentDetails.Where(x => x.CategoryName == "Advance" && (x.PaymentType == "CASH" || x.PaymentType == "UPI")).GroupBy(g => g.PaymentType).Select(x => new { Id = x.Key, Value = x.Sum(x => x.Amount) }).OrderBy(x => x.Id).ToList();
+                var amtSpent = paymentDetails.Where(x => x.MemberName == "TripAdvisor" && (x.PaymentType == "CASH" || x.PaymentType == "UPI")).GroupBy(g => g.PaymentType).Select(x => new { Id = x.Key, Value = x.Sum(x => x.Amount) }).OrderBy(x => x.Id).ToList();
+                var amtCollected = paymentDetails.Where(x => x.CategoryName == "Advance" && (x.PaymentType == "CASH" || x.PaymentType == "UPI")).GroupBy(g => g.PaymentType).Select(x => new { Id = x.Key, Value = x.Sum(x => x.Amount) }).OrderBy(x => x.Id).ToList();
 
                 var cashAmt = amtCollected.Where(x => x.Id == "CASH").Select(x => x.Value)?.FirstOrDefault();
                 PaymentType cashTypeCollected = new PaymentType();

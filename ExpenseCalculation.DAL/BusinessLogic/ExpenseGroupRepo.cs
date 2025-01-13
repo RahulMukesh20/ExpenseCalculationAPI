@@ -90,7 +90,7 @@ namespace ExpenseCalculation.DAL.BusinessLogic
                 calcContext.TripGroups.Add(group);
                 calcContext.SaveChanges();
 
-                repo.CreateFriend(1, "TripAdvisor", groupId);
+                repo.AddMember(groupId, "TripAdvisor");
 
                 result = "Success - Group Name Added Successfully";
             }
@@ -162,6 +162,25 @@ namespace ExpenseCalculation.DAL.BusinessLogic
 
             }
             return status;
+        }
+
+        /// <summary>
+        /// Get group share
+        /// </summary>
+        /// <param name="groupId"></param>
+        /// <returns></returns>
+        public long GetGroupShare(int groupId)
+        {
+            long res = 0;
+            try
+            {
+                res = (long)calcContext.TripGroups.Where(x => x.GroupId == groupId).Select(x => x.GroupShare).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return res;
         }
     }
 }

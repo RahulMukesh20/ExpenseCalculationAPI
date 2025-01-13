@@ -25,7 +25,7 @@ namespace ExpenseCalculation.DAL.BusinessLogic
             List<Member> members = new List<Member>();
             try
             {
-                members = calcContext.Members.Where(x => x.GroupId == groupId && x.MemberName != "TripAdvisor").Distinct().ToList();
+                members = calcContext.Members.Where(x => x.GroupId == groupId).Distinct().ToList();
             }
             catch (Exception ex)
             {

@@ -32,6 +32,21 @@ namespace ExpenseCalc.WebApi.Controllers
             return Ok(tripGroups);
         }
 
+        [HttpGet]
+        public IActionResult GetGroupShareAmount(int id)
+        {
+            long amount = 0;
+            try
+            {
+                amount = repo.GetGroupShare(id);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            return Ok(amount);
+        }
+
         [HttpPost]
         public IActionResult AddGroup([FromForm] string groupName)
         {
